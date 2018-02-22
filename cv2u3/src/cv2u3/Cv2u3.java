@@ -25,9 +25,14 @@ public class Cv2u3 {
         EntityManagerFactory emf = createEntityManagerFactory("cv2u3PU");
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        Query q =  em.createNativeQuery("SELECT * FROM OSOBA p");
+        Query q =  em.createNativeQuery("SELECT * FROM OSOBA p", Person.class);
+        
+       // Query q = em.createNamedQuery("Person.findAll");
         List resultList = q.getResultList();
-        System.out.println(resultList.get(0));
+        for(Object o : resultList){
+            Person p = (Person) o;
+            System.out.println(p);
+        }
         em.close();
         emf.close();
     }
