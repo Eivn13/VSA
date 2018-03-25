@@ -37,10 +37,6 @@ public class Cv6u3c {
     }
     
     static void addData(MyData d, Item i){
-        i.setDataContainer(d);
-        em.persist(d);
-        em.persist(i);
-        em.getTransaction().commit();
     }
     
     static void appendData(MyData d, Item i, Item tail){

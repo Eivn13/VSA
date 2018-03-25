@@ -25,6 +25,7 @@ public class Cv4u2b {
         Kniha k2 = new Kniha();
         Osoba o1 = new Osoba();
         Osoba o2 = new Osoba();
+        
         k1.setNazov("Prva Kniha");
         k2.setNazov("Druha Kniha");
         o1.setId(19999l);
