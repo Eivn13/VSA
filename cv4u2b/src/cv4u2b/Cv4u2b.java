@@ -35,7 +35,6 @@ public class Cv4u2b {
         List l1 = new ArrayList();
         List l2 = new ArrayList();
         l1.add(o1);
-        l1.add(o2);
         l2.add(o2);
         k1.setAutor(l1);
         k2.setAutor(l2);
