@@ -1,0 +1,50 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package rest;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ *
+ * @author Dominik
+ */
+public class Menu {
+    private String den;
+    private Map<Integer, Jedlo> ponuka;
+    
+    public Menu(){
+        ponuka = new HashMap();
+    }
+
+    /**
+     * @return the den
+     */
+    public String getDen() {
+        return den;
+    }
+
+    /**
+     * @param den the den to set
+     */
+    public void setDen(String den) {
+        this.den = den;
+    }
+
+    /**
+     * @return the ponuka
+     */
+    public Map<Integer, Jedlo> getPonuka() {
+        return ponuka;
+    }
+
+    /**
+     * @param ponuka the ponuka to set
+     */
+    public void setPonuka(Map<Integer, Jedlo> ponuka) {
+        this.ponuka = ponuka;
+    }
+}
