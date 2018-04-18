@@ -71,9 +71,7 @@ public class Zap1r2018 {
         q1.setParameter("name", author);
         TypedQuery<Book> q2 = em.createQuery("SELECT b FROM Book b WHERE b.authors = :authors", Book.class);
         q2.setParameter("authors", q1.getSingleResult());
-        TypedQuery<Book> q3 = em.createQuery("SELECT b FROM Book b WHERE b.tags is NOT NULL", Book.class);
-        //q3.setParameter("id", q2.getSingleResult());
-        System.out.println(q3.getSingleResult());
+        System.out.println(q2.getSingleResult().getTags().get(0));
         return false;
     }
     /*
