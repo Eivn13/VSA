@@ -5,16 +5,24 @@
  */
 package rest;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author Dominik
  */
+@XmlRootElement
 public class Jedlo {
     private String nazov;
     private Double cena;
     
     public Jedlo(){
         
+    }
+
+    @Override
+    public String toString() {
+        return "Jedlo{" + "nazov=" + nazov + ", cena=" + cena + '}';
     }
     
     /**

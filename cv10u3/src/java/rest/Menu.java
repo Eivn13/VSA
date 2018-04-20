@@ -7,14 +7,21 @@ package rest;
 
 import java.util.HashMap;
 import java.util.Map;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author Dominik
  */
+@XmlRootElement
 public class Menu {
     private String den;
     private Map<Integer, Jedlo> ponuka;
+
+    @Override
+    public String toString() {
+        return "Menu{" + "den=" + den + ", ponuka=" + ponuka + '}';
+    }
     
     public Menu(){
         ponuka = new HashMap();
