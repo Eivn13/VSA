@@ -41,6 +41,10 @@ public class NewJerseyClient {
         return resource.request(javax.ws.rs.core.MediaType.TEXT_HTML).get(String.class);
     }
 
+    public void putWord(Object requestEntity, String lang, String word) throws ClientErrorException {
+        webTarget.path(java.text.MessageFormat.format("{0}/{1}", new Object[]{lang, word})).request(javax.ws.rs.core.MediaType.TEXT_HTML).put(javax.ws.rs.client.Entity.entity(requestEntity, javax.ws.rs.core.MediaType.TEXT_HTML));
+    }
+
     public String getWord(String lang, String word) throws ClientErrorException {
         WebTarget resource = webTarget;
         resource = resource.path(java.text.MessageFormat.format("{0}/{1}", new Object[]{lang, word}));

@@ -16,11 +16,14 @@ public class Cv9u6servis {
      */
     public static void main(String[] args) {
         NewJerseyClient client = new NewJerseyClient();
-        System.out.println(client.getHtml());
+        /*System.out.println(client.getHtml());
         client.deleteWord("RU", "Sloth");
         client.deleteLang("RU");
         System.out.println(client.getHtml());
-        System.out.println(client.getWord("RU", "Sloth"));
+        System.out.println(client.getWord("RU", "Sloth"));*/
+        System.out.println(client.getHtml());
+        client.putWord("Rifle", "RU", "Puska");
+        System.out.println(client.getWord("RU", "Puska"));
     }
     
 }

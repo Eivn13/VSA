@@ -8,8 +8,10 @@ package rest;
 import java.util.HashMap;
 import java.util.Map;
 import javax.inject.Singleton;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -85,19 +87,21 @@ public class SlovnikResource {
      * PUT method for updating or creating an instance of SlovnikResource
      * @param lang
      * @param word
+     * @param slovo
      */
-    /*@PUT
+    @PUT
     @Path("{lang: [A-Z].*}/{word: [A-Z].*}")
     @Consumes(MediaType.TEXT_HTML)
-    public void putWord(@PathParam("lang") String lang, @PathParam("word") String word) {
+    public void putWord(@PathParam("lang") String lang, @PathParam("word") String word, String slovo) {
         if(suppLanguages.containsKey(lang)){
-            
+            suppLanguages.get(lang).put(word, slovo);
         }
         else {
             Map <String, String> newLang = new HashMap();
             suppLanguages.put(lang, newLang);
+            suppLanguages.get(lang).put(word, slovo);
         }
-    }*/
+    }
     
     /**
      * DELETE method for deleting an instance of SlovnikResource

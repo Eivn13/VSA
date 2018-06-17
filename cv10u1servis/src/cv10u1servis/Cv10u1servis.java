@@ -22,6 +22,8 @@ public class Cv10u1servis {
         jedlo.setNazov("Hamburger");
         client.postJedlo(jedlo);
         System.out.println(client.getMenu());
+        client.putJedlo(jedlo, "2");
+        System.out.println(client.getMenu());
     }
     
 }
